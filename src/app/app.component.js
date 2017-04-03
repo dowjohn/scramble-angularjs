@@ -4,7 +4,8 @@ import templateUrl from './app.template'
 
 const controller = class {
   // styles = styles
-  sentence = 'joseph of aramethia'
+  sentence = ''
+  sentenceOutput
 
   scramble () {
     let lettersArray = concatMultipleStringsIntoArray(this.sentence)
@@ -15,13 +16,16 @@ const controller = class {
       lettersArray.splice(letterInt, 1)
     }
     outArray.splice(Math.floor(Math.random() * outArray.length), 0, ' ')
-    this.sentence = outArray.join('').trim()
+    this.sentenceOutput = outArray.join('').trim()
     console.log(this.sentence)
   }
 }
 
 export const greatestApp = {
   templateUrl,
+  bindings: {
+    sentence: '<'
+  },
   controller,
   controllerAs: 'app'
 }

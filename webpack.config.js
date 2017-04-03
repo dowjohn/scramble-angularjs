@@ -170,7 +170,7 @@ const plugins = [
   // index.html file, allowing us to use auto-generated
   // file names
   new HtmlWebpackPlugin({
-    title: 'ftd-clicker',
+    title: 'scramble',
     // tells webpack to inject the compiled files into the
     // head of the document
     inject: 'head',
